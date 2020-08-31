@@ -1,0 +1,9 @@
+{
+	"editor.formatOnSave": true,
+	"[typescript]": {
+		"editor.formatOnSave": true
+	},
+	"eslint.workingDirectories": [{ "directory": ".", "changeProcessCWD": true }],
+	"svg.preview.background": "transparent",
+	"prettier.useTabs": true
+}
