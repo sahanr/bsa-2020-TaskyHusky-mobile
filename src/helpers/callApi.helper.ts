@@ -51,7 +51,7 @@ export const throwIfFailed = async (res: Response) => {
 };
 
 export const getUrl = (args: RequestArgs) =>
-	`${BASE_URL}${API}${args.endpoint}${args.query ? `?${qs.stringify()}` : ''}`;
+	`${BASE_URL}${API}${args.endpoint}${args.query ? `?${qs.stringify(args.query)}` : ''}`;
 
 export const getArgs = async (args: RequestArgs): Promise<RequestInit> => {
 	const headers: Headers | string[][] | Record<string, string> | undefined = {};
