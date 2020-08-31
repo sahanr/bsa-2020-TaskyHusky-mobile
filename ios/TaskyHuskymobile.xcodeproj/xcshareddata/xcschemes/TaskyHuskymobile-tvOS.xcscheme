@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "TaskyHuskymobile-tvOS.app"
-               BlueprintName = "TaskyHuskymobile-tvOS"
-               ReferencedContainer = "container:TaskyHuskymobile.xcodeproj">
+               BuildableName = "TaskyHusky Mobile-tvOS.app"
+               BlueprintName = "TaskyHusky Mobile-tvOS"
+               ReferencedContainer = "container:TaskyHusky Mobile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "TaskyHuskymobile-tvOSTests.xctest"
-               BlueprintName = "TaskyHuskymobile-tvOSTests"
-               ReferencedContainer = "container:TaskyHuskymobile.xcodeproj">
+               BuildableName = "TaskyHusky Mobile-tvOSTests.xctest"
+               BlueprintName = "TaskyHusky Mobile-tvOSTests"
+               ReferencedContainer = "container:TaskyHusky Mobile.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "TaskyHuskymobile-tvOS.app"
-            BlueprintName = "TaskyHuskymobile-tvOS"
-            ReferencedContainer = "container:TaskyHuskymobile.xcodeproj">
+            BuildableName = "TaskyHusky Mobile-tvOS.app"
+            BlueprintName = "TaskyHusky Mobile-tvOS"
+            ReferencedContainer = "container:TaskyHusky Mobile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "TaskyHuskymobile-tvOS.app"
-            BlueprintName = "TaskyHuskymobile-tvOS"
-            ReferencedContainer = "container:TaskyHuskymobile.xcodeproj">
+            BuildableName = "TaskyHusky Mobile-tvOS.app"
+            BlueprintName = "TaskyHusky Mobile-tvOS"
+            ReferencedContainer = "container:TaskyHusky Mobile.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
