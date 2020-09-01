@@ -4,7 +4,6 @@ import EmailInput from '../common/Input/EmailInput';
 import PasswordInput from '../common/Input/PasswordInput';
 import { LogIn } from '../../containers/LoginPage/logic/actionTypes';
 import Button from '../common/Button';
-import styles from '../common/Input/styles.module';
 
 interface Props {
 	onSubmit?: (data: LogIn) => void;
