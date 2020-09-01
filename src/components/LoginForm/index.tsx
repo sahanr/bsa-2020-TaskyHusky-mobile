@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { View, StyleSheet, Button } from 'react-native';
 import EmailInput from '../common/Input/EmailInput';
 import PasswordInput from '../common/Input/PasswordInput';
+import { LogIn } from '../../containers/LoginPage/logic/actionTypes';
 
 interface Props {
-	onSubmit?: (data: any) => void;
+	onSubmit?: (data: LogIn) => void;
 }
 
 const LoginForm: React.FC<Props> = ({ onSubmit = () => {} }) => {

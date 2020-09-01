@@ -1,9 +1,8 @@
 import qs from 'querystring';
 import { FilePickerFile } from 'react-native-file-picker';
-import AsyncStorage from '@react-native-community/async-storage';
-import { LocalStorageKeys } from '../constants/LocalStorageKeys';
 import { WebApiException } from '../typings/webApiException';
 import { REACT_APP_BASE_URL } from 'react-native-dotenv';
+import { getToken } from './jwtToken.helper';
 
 const BASE_URL = REACT_APP_BASE_URL ?? '/';
 const API = '/api/';
@@ -21,7 +20,7 @@ interface RequestArgs {
 	skipAuthorization?: boolean;
 }
 
-export default async function callWebApi(args: RequestArgs) {
+export const callWebApi = async (args: RequestArgs) => {
 	try {
 		const res: Response = await fetch(getUrl(args), await getArgs(args));
 		await throwIfFailed(res);
@@ -29,7 +28,7 @@ export default async function callWebApi(args: RequestArgs) {
 	} catch (err) {
 		throw err;
 	}
-}
+};
 
 export const throwIfFailed = async (res: Response) => {
 	if (!res.ok) {
@@ -55,7 +54,7 @@ export const getUrl = (args: RequestArgs) =>
 
 export const getArgs = async (args: RequestArgs): Promise<RequestInit> => {
 	const headers: Headers | string[][] | Record<string, string> | undefined = {};
-	const token = await AsyncStorage.getItem(LocalStorageKeys.SESSION_TOKEN);
+	const token = await getToken();
 	let body: Body;
 
 	if (token && !args.skipAuthorization) {
