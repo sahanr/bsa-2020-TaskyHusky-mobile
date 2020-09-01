@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { View, StyleSheet, Button } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import EmailInput from '../common/Input/EmailInput';
 import PasswordInput from '../common/Input/PasswordInput';
 import { LogIn } from '../../containers/LoginPage/logic/actionTypes';
+import Button from '../common/Button';
+import styles from '../common/Input/styles.module';
 
 interface Props {
 	onSubmit?: (data: LogIn) => void;
@@ -40,7 +42,7 @@ const LoginForm: React.FC<Props> = ({ onSubmit = () => {} }) => {
 				onChange={setPassword}
 			/>
 			<View style={styles.mTop} />
-			<Button color="#FECE2F" title="Log in" onPress={submit} disabled={!buttonActive} />
+			<Button onPress={submit} disabled={!buttonActive} title="Log in" style={styles.button} />
 		</>
 	);
 };
@@ -51,6 +53,9 @@ const styles = StyleSheet.create({
 	},
 	mTop: {
 		marginTop: 10,
+	},
+	button: {
+		backgroundColor: '#FECE2F',
 	},
 });
 
