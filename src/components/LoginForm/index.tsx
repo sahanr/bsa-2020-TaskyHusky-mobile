@@ -40,7 +40,7 @@ const LoginForm: React.FC<Props> = ({ onSubmit = () => {} }) => {
 				onChange={setPassword}
 			/>
 			<View style={styles.mTop} />
-			<Button color="green" title="Log in" onPress={submit} disabled={!buttonActive} />
+			<Button color="#FECE2F" title="Log in" onPress={submit} disabled={!buttonActive} />
 		</>
 	);
 };

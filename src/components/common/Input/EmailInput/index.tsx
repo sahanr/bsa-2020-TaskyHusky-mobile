@@ -1,8 +1,7 @@
 import React from 'react';
-import styles from '../styles.module';
-import { TextInput, TextStyle, ViewStyle, ImageStyle, View } from 'react-native';
+import { TextStyle, ViewStyle, ImageStyle } from 'react-native';
 import validator from 'validator';
-import FAIcon from 'react-native-vector-icons/FontAwesome5';
+import TextInput from '../TextInput';
 
 interface Props {
 	onChange?: (email: string) => void;
@@ -16,9 +15,9 @@ interface Props {
 const EmailInput: React.FC<Props> = ({
 	onChange = () => {},
 	onChangeValid = () => {},
-	value = '',
-	style = {},
-	isValid = true,
+	value,
+	style,
+	isValid,
 	placeholder = 'Email',
 }) => {
 	const handleChange = (email: string) => {
@@ -26,20 +25,15 @@ const EmailInput: React.FC<Props> = ({
 		onChangeValid(validator.isEmail(email));
 	};
 
-	const getColorStyle = () => {
-		return { color: !isValid ? 'red' : 'black' };
-	};
-
 	return (
-		<View style={[styles.inputContainer, style]}>
-			<TextInput
-				onChangeText={handleChange}
-				placeholder={placeholder}
-				value={value}
-				style={[styles.input, getColorStyle()]}
-			/>
-			<FAIcon name="at" style={styles.icon} />
-		</View>
+		<TextInput
+			icon="at"
+			value={value}
+			style={style}
+			isValid={isValid}
+			placeholder={placeholder}
+			onChange={handleChange}
+		/>
 	);
 };
 

@@ -15,6 +15,7 @@ export const authReducer = createReducer(initialState, {
 			...state,
 			user: action.user,
 			isAuthorized: Boolean(action.user),
+			profileLoaded: true,
 		};
 	},
 });

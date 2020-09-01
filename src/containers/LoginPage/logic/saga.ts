@@ -27,9 +27,10 @@ function* watchLogInUser() {
 function* fetchLoadProfile() {
 	try {
 		const result = yield call(getProfileRequest);
-		yield put(actions.loadProfileSuccess({ user: result.user }));
+		yield put(actions.loadProfileSuccess({ user: result }));
 	} catch (err) {
 		globalNavigate('Login');
+		yield put(actions.loadProfileSuccess({ user: null }));
 	}
 }
 

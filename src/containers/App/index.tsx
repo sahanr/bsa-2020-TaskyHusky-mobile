@@ -1,15 +1,16 @@
 import React from 'react';
 import { Provider as ReduxProvider } from 'react-redux';
-import redux from '../../redux/store';
-import { PersistGate } from 'redux-persist/integration/react';
-import Routing from '../Routing';
+import store from '../../redux/store';
+import { NavigationContainer } from '@react-navigation/native';
+import AppNavigator from '../../navigators/AppNavigator';
+import { initRef } from '../../navigation';
 
 const App: React.FC = () => {
 	return (
-		<ReduxProvider store={redux.store}>
-			<PersistGate loading={null} persistor={redux.persistor}>
-				<Routing />
-			</PersistGate>
+		<ReduxProvider store={store}>
+			<NavigationContainer>
+				<AppNavigator ref={(ref) => initRef(ref)} />
+			</NavigationContainer>
 		</ReduxProvider>
 	);
 };

@@ -1,7 +1,13 @@
-import React from 'react';
+import { NavigationContainerComponent, NavigationActions } from 'react-navigation';
 
-export const navigationRef = React.createRef<any>();
+let navigation: NavigationContainerComponent | null;
+
+export const initRef = (ref: NavigationContainerComponent | null) => {
+	navigation = ref;
+};
 
 export default function globalNavigate(name: string, params?: any) {
-	return navigationRef.current?.navigate(name, params);
+	if (navigation) {
+		return navigation.dispatch(NavigationActions.navigate({ routeName: name, params }));
+	}
 }

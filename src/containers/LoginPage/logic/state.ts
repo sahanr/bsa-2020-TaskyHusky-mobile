@@ -7,5 +7,5 @@ export interface AuthState {
 export const initialState: AuthState = {
 	user: null,
 	isAuthorized: false,
-	profileLoaded: true,
+	profileLoaded: false,
 };
