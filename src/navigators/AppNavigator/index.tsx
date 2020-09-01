@@ -9,7 +9,7 @@ const AppNavigator = createAppContainer(
 			Projects,
 		},
 		{
-			initialRouteName: 'Login',
+			initialRouteName: 'Projects',
 		},
 	),
 );

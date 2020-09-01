@@ -10,4 +10,11 @@ export const authReducer = createReducer(initialState, {
 			isAuthorized: Boolean(action.user),
 		};
 	},
+	[actionTypes.LOAD_PROFILE_SUCCESS](state, action: actionTypes.LoadProfileSuccess) {
+		return {
+			...state,
+			user: action.user,
+			isAuthorized: Boolean(action.user),
+		};
+	},
 });

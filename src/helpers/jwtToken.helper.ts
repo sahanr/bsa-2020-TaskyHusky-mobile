@@ -1,5 +1,5 @@
-import AsyncStorage from '@react-native-community/async-storage';
 import { LocalStorageKeys } from '../constants/LocalStorageKeys';
+import localStorage from './localStorage';
 
-export const setToken = (token: string) => AsyncStorage.setItem(LocalStorageKeys.SESSION_TOKEN, token);
-export const getToken = () => AsyncStorage.getItem(LocalStorageKeys.SESSION_TOKEN);
+export const setToken = (token: string) => localStorage.set(LocalStorageKeys.SESSION_TOKEN, token);
+export const getToken = () => localStorage.get(LocalStorageKeys.SESSION_TOKEN);
